@@ -5,7 +5,7 @@ import java.util.Date;
 public class Account {
 
 	private String acctid;
-	private int balance;
+	private long balance;
 	private Date createdDate;
 	
 	public Account( String acctid){
@@ -14,7 +14,7 @@ public class Account {
 		createdDate = new Date();
 	}
 	
-	public void deposit( int amount ){
+	public void deposit( long amount ){
 		balance = balance + amount;
 	}
 	
@@ -39,7 +39,7 @@ public class Account {
 		return acctid;
 	}
 
-	public int getBalance() {
+	public long getBalance() {
 		return balance;
 	}
 

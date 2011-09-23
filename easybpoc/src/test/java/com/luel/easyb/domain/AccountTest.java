@@ -22,7 +22,7 @@ public class AccountTest {
 
 	@Test
 	public void newAccountBalanceShouldBeEqualtoinitialDeposit() {
-		int initialAmount = 100;
+		long initialAmount = 100;
 		account.deposit(initialAmount);
 		assertThat("new account balance should be equal to initial deposit",account.getBalance(), equalTo(initialAmount));
 	}
