@@ -1,6 +1,7 @@
 package com.luel.easyb.domain
 
-scenario "Transfer money to another account",{
+scenario "Transfer money from an account",{
+
 	given "two accounts",{
 		account1 = new Account("12345")
 		account2 = new Account("22345")

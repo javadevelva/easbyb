@@ -33,8 +33,6 @@ public class Account {
 		account.deposit(amount);
 	}
 	
-
-	
 	public String getAcctid() {
 		return acctid;
 	}
