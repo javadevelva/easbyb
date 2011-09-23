@@ -56,9 +56,9 @@
 					</execution>
 				</executions>
 				<configuration>
-					<!-- <storyType>html</storyType> -->
+					<storyType>html</storyType>
 					<easybTestDirectory>${basedir}/src/test/stories</easybTestDirectory>
-					<storyReport>target/easyb/easyb-stories.txt</storyReport>
+					<storyReport>target/easyb/easyb-stories.html</storyReport>
 					<xmlReport>target/easyb/easyb-report.xml</xmlReport>
 				</configuration>
 			</plugin>
