@@ -29,6 +29,6 @@ scenario "try to withdraw money before money is deposited"
 when "a withdrawal is attempted before money is deposited"
 then "insufficient funds exception should be raised"
 
-after_each "clean resources",{
+after "clean resources",{
 	account = null
 }
