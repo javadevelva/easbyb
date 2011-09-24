@@ -3,9 +3,9 @@ package com.luel.easyb.domain
 description """this is about depositing money into a checking account"""
 
 narrative "description", {
-	as_a "teller"
-	i_want "deposit money into a newly created account"
-	so_that "the customer will be able to use ATM any time"
+	as_a "client"
+	i_want "i want to deposit money into my new account"
+	so_that "i can withdraw money from an ATM at any time"
 }
 
 before_each "initialize a new account",{
