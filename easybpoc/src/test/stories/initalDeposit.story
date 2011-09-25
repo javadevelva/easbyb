@@ -1,4 +1,9 @@
-package com.luel.easyb.domain
+package com.luel.easyb.story
+
+import com.luel.easyb.domain.Account
+import com.luel.easyb.service.EmailService
+import org.springframework.context.ApplicationContext
+import org.springframework.context.support.ClassPathXmlApplicationContext
 
 description """this is about depositing money into a checking account"""
 
@@ -11,6 +16,8 @@ narrative "description", {
 before_each "initialize a new account",{
 	given "a newly created account",{
 		account = new Account("12345")
+		context = new ClassPathXmlApplicationContext("application_context.xml")
+		emailService = context.getBean(EmailService.class)
 	}
 }
 
@@ -22,6 +29,9 @@ scenario "Make initial deposit onto a new account",{
 	then "the account balance should be equal to the amount deposited",{
 		account.balance.shouldBe initialAmount
 	}
+	and "an email is sent indicating the account has been set up",{
+		emailService.send account.acctid
+	}
 }
 //this is not implemented yet but it won't break the build
 //it will show as pending in the report
@@ -31,4 +41,5 @@ then "insufficient funds exception should be raised"
 
 after "clean resources",{
 	account = null
+	context = null
 }
