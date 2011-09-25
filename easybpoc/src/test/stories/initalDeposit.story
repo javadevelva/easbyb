@@ -9,7 +9,7 @@ description """this is about depositing money into a checking account"""
 
 narrative "description", {
 	as_a "client"
-	i_want "i want to deposit money into my new account"
+	i_want "to deposit money into my new account"
 	so_that "i can write check or withdraw money from an ATM at any time"
 }
 
@@ -29,7 +29,7 @@ scenario "Make initial deposit onto a new account",{
 	then "the account balance should be equal to the amount deposited",{
 		account.balance.shouldBe initialAmount
 	}
-	and "an email is sent to the account holder sent indicating the account has been set up",{
+	and "an email is sent to the account holder indicating the account has been set up",{
 		emailService.send account.acctid
 	}
 }
