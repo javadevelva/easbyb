@@ -1,4 +1,7 @@
-package com.luel.easyb.domain
+package com.luel.test.story
+
+import com.luel.easyb.domain.Account
+
 
 scenario "Transfer money from an account",{
 

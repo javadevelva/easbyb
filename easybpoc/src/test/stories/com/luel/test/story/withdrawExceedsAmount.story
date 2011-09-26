@@ -1,5 +1,7 @@
-package com.luel.easyb.domain
+package com.luel.test.story
 
+import com.luel.easyb.domain.Account
+import com.luel.easyb.domain.InsufficientFundsException
 
 scenario "Withdraw more money than there is in the account",{
 

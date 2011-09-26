@@ -1,4 +1,4 @@
-package com.luel.easyb.story
+package com.luel.test.story
 
 import com.luel.easyb.domain.Account
 import com.luel.easyb.service.EmailService
