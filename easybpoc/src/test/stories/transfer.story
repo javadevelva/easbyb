@@ -15,6 +15,6 @@ scenario "Transfer money from an account",{
 		account1.transfer(transferAmount,account2)
 	}
 	then "account one balance should be less by the transfer amount",{
-		account1.balance.shouldBe (account1InitialBalance - transferAmount)
+		account1.balance.shouldBe account1InitialBalance - transferAmount
 	}
 }
