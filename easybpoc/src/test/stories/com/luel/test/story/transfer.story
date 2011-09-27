@@ -6,14 +6,14 @@ import com.luel.easyb.domain.Account
 scenario "Transfer money from an account",{
 
 	given "two accounts",{
-		account1 = new Account("12345")
-		account2 = new Account("22345")
+		srcAccount = new Account("12345")
+		targetAccount = new Account("22345")
 	}
-	and "the first account has sufficient balance",{
-		account1InitialBalance = 200
-		account1.deposit(account1InitialBalance)
+	and "the source account has sufficient balance",{
+		srcAccountInitialBalance = 200
+		srcAccount.deposit(srcAccountInitialBalance)
 	}
-	when "money is transfered from the first account to the second account",{
+	when "money is transfered from the source account to the target account",{
 		transferAmount = 50
 		account1.transfer(transferAmount,account2)
 	}

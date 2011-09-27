@@ -18,14 +18,15 @@ public class Account {
 		balance = balance + amount;
 	}
 	
-	public void withdraw( int amount ){
+	public void withdraw( long amount ){
 		if( amount > balance ){
 			throw new InsufficientFundsException("requested amount exceeds balance");
 		}
 		balance = balance - amount;	
 	}
 	
-	public void transfer(int amount, Account account){
+	//for test purpose only, will be replaced by real transfer service
+	public void transfer(long amount, Account account){
 		if( amount > balance ){
 			throw new InsufficientFundsException("requested amount exceeds balance");
 		}
