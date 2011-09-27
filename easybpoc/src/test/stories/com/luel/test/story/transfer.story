@@ -15,9 +15,9 @@ scenario "Transfer money from an account",{
 	}
 	when "money is transfered from the source account to the target account",{
 		transferAmount = 50
-		account1.transfer(transferAmount,account2)
+		srcAccount.transfer(transferAmount,targetAccount)
 	}
 	then "account one balance should be less by the transfer amount",{
-		account1.balance.shouldBe account1InitialBalance - transferAmount
+		srcAccount.balance.shouldBe srcAccountInitialBalance - transferAmount
 	}
 }
