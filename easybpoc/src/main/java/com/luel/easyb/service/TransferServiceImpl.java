@@ -20,6 +20,9 @@ public class TransferServiceImpl implements TransferService {
 		srcAct.withdraw(amount);
 		targetAct.deposit(amount);
 		
+		accountRepository.update(srcAct);
+		accountRepository.update(targetAct);
+		
 		TransferConfirmation transferConfirmation = new TransferConfirmation();
 		transferConfirmation.setNewBalance(srcAct.getBalance());
 		return transferConfirmation;

@@ -27,10 +27,7 @@ public class Account {
 	
 	//for test purpose only, will be replaced by real transfer service
 	public void transfer(long amount, Account account){
-		if( amount > balance ){
-			throw new InsufficientFundsException("requested amount exceeds balance");
-		}
-		balance = balance - amount;	
+		withdraw(amount);
 		account.deposit(amount);
 	}
 	
