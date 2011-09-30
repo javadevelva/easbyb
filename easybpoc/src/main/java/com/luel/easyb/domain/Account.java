@@ -25,12 +25,6 @@ public class Account {
 		balance = balance - amount;	
 	}
 	
-	//for test purpose only, will be replaced by real transfer service
-	public void transfer(long amount, Account account){
-		withdraw(amount);
-		account.deposit(amount);
-	}
-	
 	public String getAcctid() {
 		return acctid;
 	}
