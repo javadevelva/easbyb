@@ -29,9 +29,7 @@ scenario "Make initial deposit onto a new account",{
 	then "the account balance should be equal to the amount deposited",{
 		account.balance.shouldBe initialAmount
 	}
-	and "an email is sent to the account holder indicating the account has been set up",{
-		emailService.send account.acctid
-	}
+	and "an email is sent to the account holder indicating the account has been set up"
 }
 //this is not implemented yet but it won't break the build
 //it will show as pending in the report
